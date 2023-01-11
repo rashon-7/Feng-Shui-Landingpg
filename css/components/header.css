@@ -1,0 +1,987 @@
+* {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+body{
+    background: black;
+    background-color: black;
+}
+@media screen and (max-width: 1920px){
+
+}
+@media screen and (max-width: 1680px){
+    .header-container{
+        display: flex;
+        height: 110px;
+        max-width: 100%;
+    }
+    header{
+        padding: 30px 20px;
+        background: black;
+        background-color: black;
+        width: 70%;
+        text-align: center;
+        height: 50px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    }
+    header:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    header .logo{
+        text-transform: uppercase;
+        color: #ffffff;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: 700;
+        display: inline-block;
+        float: left;
+        font-size: 20px;
+        width: 20%;
+    }
+    .header-container header .logo i{
+        display: inline-block;
+        color: #ffffff;
+        position: absolute;
+        right: 40px;
+        cursor: pointer;
+    }
+     .icon,.menu-2, input{
+        display: none;
+    }
+    header .logo  span{
+        color: gold;
+    }
+    header .menu{
+        display: inline-block;
+        position: relative;
+        width: 60%;
+        top: 10px;
+    }
+    header .menu a{
+        color: #ffffff;
+        text-decoration: none;
+        display: inline;
+        margin-right: 30px;
+        font-size: 16px;
+    }
+    header .menu a:hover{
+        color: gold;
+    }
+
+    header .socials{
+        display: inline;
+        margin-top: 10px;
+        float: right;
+        width: 20%;
+    }
+    header .socials img{
+        width: 25px;
+        height: 25px;
+        margin-right: 5px;
+    }
+    .header-container .header-right{
+        background: #ffffff;
+        width: 30%;
+        height: 725%;
+    }
+    .header-container .header-right img{
+        width: 100%;
+        height: 100%;
+    }
+    .content-area .top-floater{
+        /* position: relative; */
+        padding: 20px;
+        color: #ffffff;
+        z-index: 1;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        /* background-color: green; */
+    }
+    .content-area .top-floater span{
+        display: block;
+        letter-spacing: 4px;
+    }
+    .content-area .top-floater #first{
+        color: gold;
+        font-size: 800%;
+        margin-left: 115px;
+    }
+    .content-area .top-floater #sec {
+        margin-left: 25%;
+        font-size: 800%;
+
+    }
+    .content-area .top-floater #third{
+        margin-left: 37%;
+        font-size: 800%;
+
+    }
+    .content-area .click-circle-section{
+        border: 1px solid #ffffff;
+        width: 550px;
+        height: 550px;
+        border-radius: 50%;
+        margin-left: -180px;
+        /* position: relative; */
+        margin-top: -15%;
+    }
+
+    .content-area .click-circle-section .yellow-btn{
+        /* position: absolute; */
+        margin-top: 225px;
+        margin-left: 245px;
+       border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        background-color: gold;
+        cursor: pointer;
+        /* display: inline-block; */
+    }
+    .content-area .click-circle-section .yellow-btn .material-symbols-outlined{
+        color: #ffffff;
+        font-size: 40px;
+        /* display: inline-block; */
+        margin-left: 25px;
+        margin-top: -5px;
+        /* position: relative; */
+
+    }
+
+    .content-area .click-circle-section a{
+        color: #ffffff;
+        left: 320px;
+        top: -23px;
+        font-size: 18px;
+        position: relative;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    .content-area .click-circle-section a:hover{
+        color: gold;
+    }
+
+/* Javascript added slide */
+    .logo1{
+        text-transform: uppercase;
+        color: #ffffff;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: 700;
+        font-size: 24px;
+        margin-top: 20px;
+        margin-bottom: 3rem;
+    }
+    .logo1  span{
+        color: gold;
+    }
+    .logo__sub1{
+        font-family: "Dancing Script", cursive;
+        font-size: 1.3rem;
+    }
+    .email-modal{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0,0,0,.7);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all .4s ease-in-out;
+        visibility: hidden;
+        opacity: 0;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: 700;
+    }
+    .email-modal--visible{
+        visibility: visible;
+        opacity: 1;
+    }
+    .email-modal__close-btn{
+        position: fixed;
+        top: 0;
+        right: 0;
+        padding: 20px;
+        cursor: pointer;
+        background: gold;
+    }
+    .email-modal .gg-close{
+        color: white;
+    }
+    .gg-close{
+        --ggs:2;
+    }
+
+    .email-modal__container{
+        background: rgb(39, 42, 46);
+        max-width: 700px;
+        width: 100%;
+        color: white;
+        display: flex;
+        position: relative;
+        overflow: hidden;
+    }
+    .email-modal__info{
+        width: 100%;
+        padding: 15px;
+    }
+    .email-modal h2{
+        font-size: 1.8rem;
+        margin-bottom: 1.2rem;
+    }
+    .email-modal__message{
+        color: rgba(221,221,221,0.63);
+        font-weight: 100;
+        line-height: 1.7;
+        margin-bottom: 1.5rem;
+    }
+    .email-modal__highlight-text{
+        color: gold;
+    }
+    .email-modal__form-group{
+        background: white;
+        display: flex;
+        padding: 5px;
+        margin-bottom: 1.2rem;
+
+    }
+    .email-modal__form-group--error{
+        border: 1px solid red;
+    }
+    .email-modal__input{
+        background: #ffffff;
+        border: 0px solid;
+        width: 100%;
+        height: 30px;
+        display: flex;
+    }
+
+    .email-modal__button{
+        background: rgba(81,158,78,1);
+        color: white;
+        border: 0;
+        width: 100px;
+        cursor: pointer;
+        border: 2px solid green;
+        /* margin-left: 70%; */
+    }
+    .email-modal__error-message{
+        color: #fbe743;
+        margin-bottom: .7rem;
+        font-size: .8rem;
+        display: none;
+    }
+    .email-modal__error-message--active{
+        display: block;
+    }
+    .email-modal__decline-offer{
+        color: rgba(221,221,221,.6);
+        text-decoration: underline;
+        font-size: .9rem;
+        cursor: pointer;
+        transition: color .3s ease-in-out;
+    }
+    .email-modal__decline-offer:hover{
+        color:white;
+    }
+    .email-modal__side-img img{
+        height: 375px;
+        width: 300px;
+    }
+    .email-thank{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: #fbe743;
+        transform: translate3d(100%, 0, 0);
+        transition: all .4s ease-in-out;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .email-thank--success{
+        transform: translate3d(0,0,0);
+    }
+    .email-thank__title{
+        color: black;
+        font-size: 3rem;
+        font-weight:700;
+        margin-bottom: 1.5rem;
+        opacity: 0;
+        transition: opacity .3s ease-in-out .4s;
+    }
+    .email-thank__message{
+        color: rgba(0,0,0,1);
+        font-weight: 300;
+        font-size: .8rem;
+        opacity: 0;
+        transition: opacity .3s ease-in-out .7s;
+    }
+    .email-thank--success .email-thank__title, .email-thank--success .email-thank__message{
+        opacity:1;
+    }
+    .footer-container {
+        display: flex;
+        background-color: grey;
+        max-width: 100%;
+        height: 360px;
+        margin-top: -10%;
+    }
+    .footer-container .footer-area{
+
+        display: inline-flex;
+        width: 71.5%;
+         height: 100%;
+    }
+    .footer-container .footer-area .image-left{
+        width: 40%;
+    }
+    .footer-container .footer-area .image-left img{
+        width: 100%;
+        height: 100%;
+
+    }
+    .footer-container .footer-area .image-left-info{
+        background-color: #ffffff;
+        width: 30%;
+        padding: 20px;
+    }
+    .footer-container .footer-area .image-left-info .yellow-sqr{
+        width: 20px;
+        height: 20px;
+        background-color: gold;
+        margin-top: 20px;
+        text-transform: uppercase;
+    }
+    .footer-container .footer-area .image-left-info h1{
+        margin-left: 30px;
+        font-size: 20px;
+    }
+    .footer-container .footer-area .image-left-info p{
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: 300;
+        line-height: 35px;
+        font-size: 18px;
+        margin-left: 10px;
+        margin-bottom: 30px;
+        padding: 10px 0 0 20px;
+    }
+
+
+    .footer-container .footer-area .image-left-info .more-info-btn{
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: 300;
+        font-size: 22px;
+        padding: 20px 0 0 30px;
+        text-decoration: none;
+        color: black;
+
+    }
+    .footer-container .footer-area .image-left-info .material-symbols-outlined{
+        font-size: 20px;
+        padding: 20px;
+    }
+    .footer-container .footer-area .image-right{
+        width: 30%;
+    }
+    .footer-container .footer-area .image-right img{
+        width: 100%;
+        height: 100%;
+    }
+    .footer-area-right{
+        display: inline-flex;
+        margin-top: 50px;
+        width: 29.5%;
+    }
+    .footer-area-right .left-box{
+        background: #ffffff;
+        width: 50%;
+        padding: 30px 20px;
+    }
+    .footer-area-right .left-box h1{
+        font-size: 60px;
+        font-weight: 200;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    }
+    .footer-area-right .left-box p{
+        padding: 10px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: 300;
+        line-height: 35px;
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+    .footer-area-right .left-box a{
+        padding: 10px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: 300;
+        line-height: 40px;
+        font-size: 20px;
+        text-decoration: none;
+        color: black;
+    }
+    .footer-area-right .right-box{
+        background: gold;
+        width: 50%;
+        padding: 30px 20px;
+    }
+    .footer-area-right .right-box h1{
+        font-size: 60px;
+        font-weight: 200;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    }
+    .footer-area-right .right-box p{
+        padding: 10px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: 300;
+        line-height: 35px;
+        font-size: 18px;
+        margin-bottom: 50px;
+
+    }
+    .footer-area-right .right-box a{
+        padding: 10px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: 300;
+        line-height: 40px;
+        font-size: 20px;
+        text-decoration: none;
+        color: black;
+        }
+        footer{
+            display: none;
+        }
+}
+@media screen and (max-width: 1274px){
+    .header-container .header-right{
+        height: 655%;
+    }
+    .content-area .top-floater #first {
+        font-size: 700%;
+        margin-left: 7%;
+    }
+    .content-area .top-floater #sec {
+        font-size: 700%;
+        margin-left: 20%;
+    }
+    .content-area .top-floater #third {
+        font-size: 700%;
+        margin-left: 30%;
+    }
+    .content-area .click-circle-section {
+        margin-top: -16%;
+    }
+    .footer-container {
+        margin-top: -20.2%;
+    }
+}
+@media screen and (min-width: 1024px) {
+
+    header .menu a {
+        margin-right: 15px;
+        font-size: 15px;
+    }
+    header .socials {
+        width: 15%;
+        margin-top: -1px;
+    }
+    .content-area .top-floater #first {
+        font-size: 600%;
+    }
+    .content-area .top-floater #sec {
+        margin-left: 21%;
+        font-size: 600%;
+    }
+    .content-area .top-floater #third {
+        margin-left: 28%;
+        font-size: 600%;
+    }
+    .content-area .click-circle-section {
+        margin-top: -4.75%;
+    }
+}
+/* Midsizes */
+@media screen and (max-width: 960px) {
+    .header-container {
+        width: 100%;
+        display: block;
+        max-width: none;
+    }
+    header{
+        width: 96%;
+    }
+    .header-container .header-right {
+        width: 101.6%;
+        height: 1069%;
+    }
+    .header-container .header-right img{
+        height: 100%;
+    }
+    .content-area{
+        width: 100%;
+    }
+    .content-area .top-floater {
+      margin-top: 30px;
+    }
+    .content-area .top-floater #first {
+        margin-left: 3%;
+    }
+    .content-area .top-floater #sec {
+        margin-left: 17%;
+    }
+    .content-area .top-floater #third {
+        margin-left: 30%;
+    }
+    .content-area .click-circle-section {
+        margin-top: 28%;
+    }
+    .footer-container{
+        max-width: none;
+        height: auto;
+        width: 100%;
+    }
+    .footer-container .footer-area{
+        display: flex;
+        width: 100%;
+         height: auto;
+    }
+    .footer-area-right{
+        margin-top: 0px;
+    }
+    .footer-area-right .left-box{
+        width: 100%;
+    }
+
+    .footer-area-right .left-box a{
+        padding: 0;
+    }
+    .footer-area-right .right-box{
+        width: 100%;
+    }
+    .footer-area-right .right-box p {
+        margin-bottom: 90px;
+    }
+    .footer-area-right .right-box a {
+        padding: 10px 0;
+    }
+}
+@media screen and (max-width: 912px) {
+    .content-area .top-floater #third {
+        margin-left: 28%;
+    }
+}
+@media screen and (max-width: 820px) {
+    .header-container {
+        height: 110px;
+        width: 87%;
+        display: block;
+        max-width: none;
+    }
+    header {
+        width: 100%;
+        text-align: center;
+        display: block;
+        height: auto;
+    }
+    header .logo {
+        margin-top: 10px;
+        width: 25%;
+    }
+    header .menu {
+        width: 60%;
+    }
+    header .menu a {
+        margin-right: 15px;
+    }
+    header .socials {
+        width: 15%;
+    }
+    .header-container .header-right {
+        width: 115%;
+    }
+    .header-container .header-right img{
+        height: 950px;
+    }
+    .content-area{
+        width: 100%;
+    }
+    .content-area .top-floater {
+        padding: 0;
+        margin-top: 10%;
+    }
+    .content-area .top-floater #first {
+        font-size: 480%;
+        margin-left: 5%;
+        width: 50%;
+    }
+    .content-area .top-floater #sec {
+        width: 50%;
+        font-size: 480%;
+        margin-left: 25%;
+    }
+    .content-area .top-floater #third {
+        width: 50%;
+        font-size: 480%;
+        margin-left: 39%;
+    }
+    .content-area .click-circle-section {
+        margin-top: 29%;
+    }
+    .footer-container {
+        display: block;
+        width: 100%;
+    }
+    .footer-container .footer-area {
+        width: 100%;
+        height: auto;
+    }
+    .footer-container .footer-area .image-left {
+        width: 33%;
+    }
+    .footer-container .footer-area .image-left-info {
+        width: 33%;
+    }
+    .footer-container .footer-area .image-right {
+        width: 33%;
+    }
+    .footer-area-right {
+        margin-top: -4px;
+        width: 100.5%;
+        position: relative;
+        max-width: none;
+
+    }
+    .footer-area-right .left-box {
+        width: 50%;
+        display: inline-block;
+        float: none;
+    }
+    .footer-area-right .right-box {
+        position: relative;
+        width: 50%;
+        display: inline-block;
+        top: 0px;
+        right: 4px;
+        float: none;
+    }
+    .footer-area-right .right-box p {
+        margin-bottom: 15px;
+    }
+    footer{
+        display: none;
+    }
+}
+@media screen and (max-width: 768px) {
+    header {
+    width: 104%;
+    }
+    header .logo {
+    width: 17%;
+    }
+    header .menu a {
+        font-size: 14px;
+    }
+    .content-area .top-floater #first {
+        font-size: 380%;
+    }
+    .content-area .top-floater #sec {
+        font-size: 380%;
+    }
+    .content-area .top-floater #third {
+        width: 53%;
+        font-size: 380%;
+    }
+    .content-area .click-circle-section {
+        margin-top: 29%;
+    }
+}
+/* Mobile Phones */
+@media screen and (max-width: 599px) {
+    .header-container {
+        height: 110px;
+        width: 96%;
+        display: block;
+        max-width: none;
+    }
+    header .logo {
+        width: 100%;
+        margin: 0;
+        font-size: 30px;
+    }
+    header .menu {
+        display: grid;
+        justify-items: start;
+
+    }
+    header .menu a {
+        margin-right: 0;
+        margin-bottom: 20px;
+        display: none;
+        opacity: 1;
+        visibility: visible;
+    }
+    header .menu a:hover{
+        border-bottom: 2px solid gold;
+    }
+    header .socials {
+        display: none;
+    }
+    .active{
+        display: block;
+    }
+    .menu-2 ul {
+        list-style: none;
+    }
+   .menu-2 li{
+        width: 100%;
+        padding: 12px 0;
+        text-align: left;
+    }
+    .menu-2  a{
+        font-size: 18px;
+        color: #ffffff;
+        text-decoration: none;
+        margin-left: 20px;
+    }
+    header .menu-2 a:hover{
+        border-bottom: 2px solid gold;
+    }
+    .icon{
+        display: inline;
+        color: #ffffff;
+        position: absolute;
+        right: 0px;
+        cursor: pointer;
+    }
+
+    .content-area .top-floater {
+        padding: auto;
+        margin-top: 28%;
+        line-height: 650%;
+    }
+
+    .content-area .top-floater #first {
+        font-size: 375%;
+        margin: 0;
+        width: 100%;
+        text-align: center;
+    }
+    .content-area .top-floater #sec {
+        width: 100%;
+        font-size: 425%;
+        margin: 0;
+        text-align: center;
+    }
+    .content-area .top-floater #third {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    font-size: 575%;
+}
+.content-area .click-circle-section {
+    margin-top: 21%;
+}
+.footer-container {
+    display: block;
+    width: 110.25%;
+}
+    .footer-container .footer-area {
+        display: block;
+    }
+    .footer-area-right {
+        position: static;
+    }
+    .footer-container .footer-area .image-left{
+        width: 100%;
+    }
+    .footer-container .footer-area .image-left-info {
+        width: 93.25%;
+    }
+    .footer-container .footer-area .image-right {
+        width: 100%;
+    }
+    .footer-area-right .right-box {
+       position: static;
+    }
+    footer {
+        display: flex;
+        position: static;
+        bottom: 0;
+        margin-top: 0%;
+        justify-content: center;
+        margin-left: 13%;
+    }
+    footer .footer-socials {
+        padding: 10px;
+    }
+        footer .footer-socials img{
+         width: 35px;
+        height: 35px;
+        margin-right: 20px;
+        /* text-align: center; */
+        }
+}
+@media screen and (max-width: 540px) {
+    .footer-container {
+        margin-top: -37%;
+    }
+}
+@media screen and (max-width: 390px) {
+
+    .header-container {
+        height: 110px;
+        width: 87%;
+        display: block;
+        max-width: none;
+    }
+    .content-area {
+        width: 100%;
+    }
+
+    .content-area .top-floater {
+        margin-top: 45%;
+    }
+    .content-area .top-floater #first {
+        font-size: 275%;
+
+    }
+    .content-area .top-floater #sec {
+        font-size: 325%;
+
+    }
+    .content-area .top-floater #third {
+    font-size: 375%;
+}
+.content-area .click-circle-section {
+    margin-top: 30%;
+    margin-left: -56%;
+}
+
+/* Javascript Start */
+
+.email-modal__container {
+    width: 100%;
+    /* display: block; */
+    /* height: 82%; */
+}
+.email-modal__info {
+    width: 92%;
+    padding: 15px;
+}
+.email-modal__side-img{
+    display: none;
+}
+
+
+
+/* Thank You Container */
+.email-thank__message {
+    margin-left: 3%;
+}
+
+
+
+
+/* Javascript End */
+
+
+.footer-container {
+    margin-top: -67%;
+    width: 100%;
+}
+.footer-container .footer-area {
+    display: block;
+}
+.footer-container .footer-area .image-left{
+    width: 100%;
+    height: 400px;
+}
+.footer-container .footer-area .image-left-info {
+    width: 89.85%;
+}
+.footer-container .footer-area .image-right {
+    width: 100%;
+}
+.footer-area-right {
+    width: 100%;
+    display: block;
+}
+.footer-area-right .left-box {
+    padding: 20px;
+    width: 89.75%;
+}
+.footer-area-right .right-box {
+    padding: 20px;
+    width: 90.75%;
+}
+footer {
+    margin-right: 7%;
+}
+footer .footer-socials {
+    padding: 10px;
+}
+    footer .footer-socials img{
+     width: 35px;
+    height: 35px;
+    margin-right: 20px;
+    }
+}
+@media screen and (max-width: 280px) {
+    .header-container {
+        width: 87%;
+    }
+    header {
+        width: 95%;
+    }
+    .header-container header .logo i {
+        right: 20px;
+
+    }
+    .content-area .top-floater {
+        line-height: 400%;
+        margin-left: 0% !important;
+        margin-top: 65%;
+    }
+    .content-area .top-floater #first {
+        font-size: 150%;
+        margin: 0;
+
+    }
+    .content-area .top-floater #sec {
+        font-size: 175%;
+        margin-left: -25%;
+        width: 150%;
+
+    }
+    .content-area .top-floater #third {
+        font-size: 225%;
+        margin-left: -25%;
+        width: 150%;
+    }
+    .content-area .top-floater {
+        margin-left: 45%;
+    }
+    .content-area .click-circle-section {
+        margin-left: -80%;
+        margin-top: 88%;
+        width: 50%;
+    }
+    .footer-container {
+        width: 100%;
+        margin-top: -87%;
+    }
+    .footer-area-right {
+        width: 94%;
+    }
+    footer {
+       margin: 0;
+    }
+    footer .footer-socials {
+    margin-left: 20px;
+}
+}
